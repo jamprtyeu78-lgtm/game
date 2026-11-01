@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Metal Sonic City</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<h1 id="ttl">METAL SONIC CITY</h1>
+<div id="menu" class="ui"><div id="load">...جاري التحميل</div>
+<div class="bt" id="bPlay" style="display:none">العب</div><div class="bt" id="bFr" style="display:none">العب مع أصدقائك</div><div class="bt" id="bSet" style="display:none">الإعدادات</div></div>
+<div id="set" class="ui"><label>الشرطة<select id="sDiff"><option value="0">بدون شرطة</option><option value="1">سهل</option><option value="2" selected>عادي</option><option value="3">صعب جداً</option></select></label>
+<label>الجرافيكس<select id="sQ"><option value="0">منخفض</option><option value="1" selected>عالي</option></select></label>
+<label>الوقت<select id="sTime"><option value="0">دورة نهار وليل</option><option value="1">نهار دائم</option><option value="2">ليل دائم</option></select></label>
+<label>الصوت<input id="sVol" type="range" min="0" max="1" step=".05" value=".7"></label>
+<label>الموسيقى<select id="sMus"><option value="1" selected>في القائمة فقط</option><option value="2">دائماً</option><option value="0">إيقاف</option></select></label>
+<label>المؤثرات<input id="sSfx" type="checkbox" checked></label>
+<label>اسمك<input id="sName" maxlength="12" placeholder="اسم اللاعب"></label>
+<label>لونك<input id="sCol" type="color" value="#35c4ff"></label>
+<label>تلوين الشخصية<input id="sTint" type="checkbox"></label>
+<label>التحكم<select id="sCtl"><option value="0" selected>تلقائي</option><option value="1">كيبورد وماوس</option><option value="2">لمس (موبايل)</option></select></label>
+<label>حجم الأزرار<input id="sCs" type="range" min=".7" max="1.5" step=".05" value="1"></label>
+<label>حساسية الكاميرا<input id="sSens" type="range" min=".4" max="2.5" step=".1" value="1"></label>
+<div class="bt" id="bEdit">🎮 تعديل مكان الأزرار</div><div class="bt" id="bBack">رجوع</div></div>
+<div id="ed"><span>اسحب أي زرار لمكانه</span><label>الحجم <input id="edCs" type="range" min=".7" max="1.5" step=".05" value="1"></label><div class="bt sm" id="edOk">✔ حفظ</div><div class="bt sm" id="edRs">إعادة ضبط</div><div class="bt sm" id="edNo">إلغاء</div></div>
+<div id="rot"><div class="ph">📱</div><div>لف الموبايل بالعرض عشان تلعب</div></div>
+<div id="fr" class="ui" style="display:none;background:var(--pn)"><div class="row"><input id="fName" maxlength="12" placeholder="اسمك"><input id="fCol" type="color" value="#35c4ff"></div><div class="bt" id="bHost">إنشاء سيرفر</div><div class="bt" id="bJoin">انضم للسيرفر</div>
+<input id="code" placeholder="الكود" maxlength="5" style="text-align:center;width:200px;font-size:22px"><div id="frs"></div><div class="bt" id="bGo" style="display:none">ابدأ</div><div class="bt" id="bFb">رجوع</div></div>
+<div id="chat"></div><div id="csend">إرسال ➤</div><input id="ci" placeholder="اكتب رسالة ثم Enter" enterkeyhint="send" autocomplete="off"><div id="mic">🎤 المايك</div>
+<div id="hud"><span id="hp"></span><span id="heat"></span></div><div id="cross"></div>
+<div id="hint">WASD حركة · Space/C صعود ونزول · Shift سرعة · E ليزر · كليك يسار رمي · كليك يمين إنزال · Q/R مراوغة</div>
+<div id="toast"></div><div id="fade"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/utils/SkeletonUtils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="model.js"></script>
+<script src="model2.js"></script>
+<script src="game.js"></script>
+<script src="controls.js"></script>
+</body></html>
